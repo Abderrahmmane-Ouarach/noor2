@@ -1,0 +1,12 @@
+{
+  "name": "noor-al-sunnah",
+  "version": "1.0.0",
+  "description": "موسوعة الأحاديث النبوية الشريفة",
+  "private": true,
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
