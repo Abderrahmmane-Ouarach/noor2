@@ -1,3 +1,5 @@
+const fetch = require('node-fetch');
+
 exports.handler = async (event) => {
   const base = (process.env.API_BASE || '').replace(/\/$/, '');
   const path = event.path.replace('/.netlify/functions/proxy', '');
@@ -5,7 +7,7 @@ exports.handler = async (event) => {
   const url  = base + path + qs;
 
   try {
-    const r = await fetch(url);
+    const r    = await fetch(url);
     const body = await r.text();
     return {
       statusCode: r.status,
